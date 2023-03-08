@@ -40,25 +40,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
-  String _text =" ";
+  String _text = "Ganjil";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
-
-      if(_counter>20){
-        _counter =1;
+      if(_counter>10){
+        _counter = 0;
       }
 
-      _text = "bilangan prima : ";
-      for(int i=1; i<=_counter; i++){
-        int bil = 0;
-        for (int j=1; j<=i;j++){
-          if (i%j==0){
-            bil=bil+1;
-          }
-        }
-        if(bil == 2){
+      _text = "Ganjil: ";
+      for(int i=0; i<= _counter; i++){
+        if(i%2 != 0){
           _text += '${i}, ';
         }
       }

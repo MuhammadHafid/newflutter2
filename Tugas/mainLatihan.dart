@@ -46,19 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
 
-      if(_counter>20){
+      if(_counter>10){
         _counter =1;
       }
 
-      _text = "bilangan prima : ";
+      _text = "bilangan genap kelipatan 3 : ";
       for(int i=1; i<=_counter; i++){
-        int bil = 0;
-        for (int j=1; j<=i;j++){
-          if (i%j==0){
-            bil=bil+1;
-          }
-        }
-        if(bil == 2){
+        if(i % 2 == 0 && i % 3 == 0){
           _text += '${i}, ';
         }
       }
