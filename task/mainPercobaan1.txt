@@ -39,29 +39,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 1;
-  String _text =" ";
+  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
-
-      if(_counter>20){
-        _counter =1;
-      }
-
-      _text = "bilangan prima : ";
-      for(int i=1; i<=_counter; i++){
-        int bil = 0;
-        for (int j=1; j<=i;j++){
-          if (i%j==0){
-            bil=bil+1;
-          }
-        }
-        if(bil == 2){
-          _text += '${i}, ';
-        }
-      }
+             if(_counter>10){
+               _counter = 0;
+             }
     });
   }
 
@@ -99,10 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              '$_text',
-              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
