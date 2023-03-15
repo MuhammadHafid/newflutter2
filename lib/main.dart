@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo222333',
+      title: 'Flutter Demo Flutter Layout',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -40,25 +40,25 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
-  String _text =" ";
+  String _text = " ";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
 
-      if(_counter>20){
-        _counter =1;
+      if (_counter > 20) {
+        _counter = 1;
       }
 
       _text = "bilangan prima : ";
-      for(int i=1; i<=_counter; i++){
+      for (int i = 1; i <= _counter; i++) {
         int bil = 0;
-        for (int j=1; j<=i;j++){
-          if (i%j==0){
-            bil=bil+1;
+        for (int j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            bil = bil + 1;
           }
         }
-        if(bil == 2){
+        if (bil == 2) {
           _text += '${i}, ';
         }
       }
