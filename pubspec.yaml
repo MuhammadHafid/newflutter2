@@ -60,7 +60,19 @@ flutter:
     - assets/images/kapal_selam.jpg
     - assets/images/kapal_selam2.jpg
     - assets/images/kapal_selam3.jpg
-    - assets/images/kapal_selam4.jpg
+    - assets/images/kelenteng.jpeg
+    - assets/images/kelenteng2.jpeg
+    - assets/images/kelenteng3.jpeg
+    - assets/images/kelenteng4.jpeg
+    - assets/images/kelenteng5.jpeg
+    - assets/images/sampoerna.jpeg
+    - assets/images/sampoerna2.jpeg
+    - assets/images/sampoerna3.jpeg
+    - assets/images/sampoerna4.jpeg
+    - assets/images/sampoerna5.jpeg
+    - assets/images/suro_boyo.jpeg
+    - assets/images/tugu_pahlawan.jpeg
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
