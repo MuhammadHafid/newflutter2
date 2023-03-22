@@ -12,11 +12,11 @@ class TourismList extends StatefulWidget {
       : super(key: key);
 
   @override
-  _TourismListState createState() => _TourismListState(doneTourismPlaceList);
+  State<TourismList> createState() => _TourismListState(doneTourismPlaceList);
 }
 
 class _TourismListState extends State<TourismList> {
-  final List<TourismPlace> doneTourismPlaceList;
+  List<TourismPlace> doneTourismPlaceList = [];
   final List<TourismPlace> tourismPlaceList = [
     TourismPlace(
         name: 'Surabaya Submarine Monument',
@@ -99,18 +99,17 @@ class _TourismListState extends State<TourismList> {
             }));
           },
           child: ListItem(
-            place: place,
-            isDone: doneTourismPlaceList.contains(place),
-            onCheckboxClick: (bool? value) {
-              setState(() {
-                if (value != null) {
-                  value
-                      ? doneTourismPlaceList.add(place)
-                      : doneTourismPlaceList.remove(place);
-                }
-              });
-            },
-          ),
+              place: place,
+              isDone: doneTourismPlaceList.contains(place),
+              onCheckboxClick: (bool? value) {
+                setState(() {
+                  if (value != null) {
+                    value
+                        ? doneTourismPlaceList.add(place)
+                        : doneTourismPlaceList.remove(place);
+                  }
+                });
+              }),
         );
       },
       itemCount: tourismPlaceList.length,
