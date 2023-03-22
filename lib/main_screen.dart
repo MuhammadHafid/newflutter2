@@ -4,6 +4,8 @@ import 'package:newflutter2/model/tourism_place.dart';
 import 'package:newflutter2/done_tourism_list.dart';
 import 'package:newflutter2/list_item.dart';
 import 'package:newflutter2/tourism_list.dart';
+import 'package:provider/provider.dart';
+import 'package:newflutter2/provider/done_tourism_provider.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key? key}) : super(key: key);
@@ -13,8 +15,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final List<TourismPlace> doneTourismPlaceList = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,20 +22,18 @@ class _MainScreenState extends State<MainScreen> {
         title: const Text('Wisata Surabaya'),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.done_outline),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return DoneTourismList(
-                      doneTourismPlaceList: doneTourismPlaceList);
-                }),
-              );
-            },
-          )
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const DoneTourismList();
+                  }),
+                );
+              },
+              icon: const Icon(Icons.done_outline))
         ],
       ),
-      body: TourismList(doneTourismPlaceList: doneTourismPlaceList),
+      body: TourismList(),
     );
   }
 }
